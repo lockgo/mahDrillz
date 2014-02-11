@@ -42,8 +42,8 @@ public class MainActivity extends Activity {
 		 final TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
 		 tableLayout.removeAllViews();
 		 
-		    TextView view1 = (TextView) findViewById(R.id.view1);
-		    view1.setText("Standard Drill Sizes - Inches");
+		    //TextView view1 = (TextView) findViewById(R.id.view1);
+		    //view1.setText("Standard Drill Sizes - Inches");
 
 		    for (int i = 0; i < (drillSize.length / 3)+1; i++) 
 		    {
@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 		        }
 
 		        // Creation  button
-		        final Button button = new Button(this);
+		        /*final Button button = new Button(this);
 		        button.setText("Delete");
 		        button.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
 		        button.setOnClickListener(new View.OnClickListener() 
@@ -85,12 +85,12 @@ public class MainActivity extends Activity {
 		                final TableRow parent = (TableRow) v.getParent();
 		                tableLayout.removeView(parent);
 		            }
-		        });
+		        });*/
 
 		        tableRow.addView(text);
 		        tableRow.addView(text2);
 		        tableRow.addView(text3);
-		        tableRow.addView(button);
+		       // tableRow.addView(button);
 
 		        tableLayout.addView(tableRow);
 		    }
@@ -100,8 +100,8 @@ public class MainActivity extends Activity {
 	 {
 		 final TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
 		 tableLayout.removeAllViews();
-		    TextView view1 = (TextView) findViewById(R.id.view1);
-		    view1.setText("Standard Drill Sizes - Inches");
+		    //TextView view1 = (TextView) findViewById(R.id.view1);
+		    //view1.setText("English and Metric");
 
 		    for (int i = 0; i < (drillSizeMetric.length / 3); i++) 
 		    {
@@ -133,7 +133,7 @@ public class MainActivity extends Activity {
 		        }
 
 		        // Creation  button
-		        final Button button = new Button(this);
+		        /*final Button button = new Button(this);
 		        button.setText("Delete");
 		        button.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
 		        button.setOnClickListener(new View.OnClickListener() 
@@ -144,12 +144,12 @@ public class MainActivity extends Activity {
 		                final TableRow parent = (TableRow) v.getParent();
 		                tableLayout.removeView(parent);
 		            }
-		        });
+		        });*/
 
 		        tableRow.addView(text);
 		        tableRow.addView(text2);
 		        tableRow.addView(text3);
-		        tableRow.addView(button);
+		        //tableRow.addView(button);
 
 		        tableLayout.addView(tableRow);
 		    }
