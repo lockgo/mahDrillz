@@ -13,25 +13,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+
     <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="vertical" >
-      
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
         <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
-            
-      
-       <TableLayout
-       android:id="@+id/table"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-		</TableLayout>
-		</ScrollView>
-  </LinearLayout>
-    
+            android:layout_height="fill_parent" >
 
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:onClick="EnglishFunction"
+        android:text="English" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button1"
+        android:layout_toLeftOf="@+id/button1"
+        android:onClick="MetricFunction"
+        android:text="Metric" />
 
 </RelativeLayout>
