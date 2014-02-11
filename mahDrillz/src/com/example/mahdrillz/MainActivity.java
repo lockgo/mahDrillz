@@ -23,16 +23,35 @@ public class MainActivity extends Activity {
 	    TextView view1 = (TextView) findViewById(R.id.view1);
 	    view1.setText("Standard Drill Sizes - Inches");
 
-	    for (int i = 0; i < drillSize.length -1; i++) 
+	    for (int i = 0; i < (drillSize.length / 3)+1; i++) 
 	    {
 	        // Creation row
 	        final TableRow tableRow = new TableRow(this);
+	        //final TableColumn tablecolumn = new TableColumn(this);
 	        tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
 	        // Creation textView
 	        final TextView text = new TextView(this);
 	        text.setText(drillSize[i] + " = " + decimalEquiv[i]);
 	        text.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+	        
+	        final TextView text2 = new TextView(this);
+	        text2.setText("\t" + drillSize[i + (drillSize.length / 3)+1] + " = " + decimalEquiv[i] + (drillSize.length / 3)+1);
+	        text2.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+	        
+	        final TextView text3 = new TextView(this);
+	        if((i + ((drillSize.length / 3)*2)+2) < drillSize.length)
+	        {
+	        	text3.setText("\t" + drillSize[i + ((drillSize.length / 3)*2)+2] + " = " + decimalEquiv[i + ((drillSize.length / 3)*2)+2] + "\t");
+	        	text3.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+	        }
+	        else
+	        {
+	        	text3.setText(" ");
+	        	text3.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+	        }
+	        
+
 
 	        // Creation  button
 	        final Button button = new Button(this);
@@ -49,6 +68,8 @@ public class MainActivity extends Activity {
 	        });
 
 	        tableRow.addView(text);
+	        tableRow.addView(text2);
+	        tableRow.addView(text3);
 	        tableRow.addView(button);
 
 	        tableLayout.addView(tableRow);
